@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUMMIT_PLANNER_2099</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="main-interface">
+        <header>
+            <h1 class="cyan-text">[ SESSION_PLANNER_v4 ]</h1>
+            <p class="magenta-text">SYNCING_SCHEDULE_WITH_CENTRAL_HUB...</p>
+        </header>
+
+        <section class="injection-panel">
+            <h3>{ INJECT_SESSION }</h3>
+            <div class="form-row">
+                <input type="text" id="talkTitle" placeholder="TALK_TITLE">
+                <input type="text" id="speakerName" placeholder="SPEAKER_NAME">
+                <button onclick="addSession()">INJECT</button>
+            </div>
+        </section>
+
+        <section class="schedule-grid" id="scheduleBoard">
+            <!-- SESSIONS_LOADED_HERE -->
+        </section>
+    </div>
+
+    <div id="speakerModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalName" class="cyan-text"></h2>
+            <p id="modalBio"></p>
+            <button onclick="closeModal()">TERMINATE_VIEW</button>
+        </div>
+    </div>
+    <script src="planner_logic.js"></script>
+</body>
+</html>
